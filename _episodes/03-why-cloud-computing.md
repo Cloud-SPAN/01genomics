@@ -10,45 +10,10 @@ objectives:
 keypoints:
 - Cloud computing increases processing speed and efficiency
 ---
-## Background
-"Cloud computing is the on-demand availability of computer system resources \[such as\] data storage and computing power, without direct active management by the user. \[Cloud computing\] relies on a "pay-as-you-go" model ..."\[[Wikipedia](https://en.wikipedia.org/wiki/Cloud_computing)\].
-
-That means we can **rent** computing resources whenever we need them, as many as we need, and pay only for the time we use them. All we need is access to the Internet and a credit card to start using the Cloud.
-
-<div id="imagesrow">
-    <img class="styfigrow" src="../fig/cloud-computing-wikipedia.svg.png" alt="Cloud interconnected resources" width="350"/>
- <p><b>Cloud computing offerings: Infrastructe, Platform, Software, .. as a Service (IaaS, PaaS, SaaS, DaaS).</b></p>
-</div>
-
-Renting computing resources (as opposed to buying and setting them up, which is a costly and complex undertaking), enables us to concentrate in our project, whether it is:
-- running some research experiments
-- developing a proof of concept for a new product or
-- running a course like this one, where we are providing each student with a virtual machine (PaaS) with all the necessary data and software analysis tools ready to use --- deleting the virtual machines once the course is over.
-
-**Two notes on terminology**: 
-
-Communication-wise, the **Cloud** refers to the Internet and all attached computers and devices, as shown in these figures:
-
-<div id="imagesrow">
-    <img class="styfigrow" src="../fig/cloud-interconnected-resources.png" alt="Cloud interconnected resources" width="350"/>&nbsp;&nbsp;&nbsp;
-    <img class="styfigrow" src="../fig/iiot_industrial_vs_consumer_iot.jpg" alt="The Cloud is the Internet" width="300"/>  
-
-<p><b>The Cloud today : &nbsp;the Internet, the Internet of Things (IoT) and the Industrial IoT (IIoT).</b></p>
-</div>
-
-The term **Cloud** comes from trying to simplify the representation of the Internet in diagrams by representing it as a cloud. 
-
-<div id="imagesrow">
-    <img class="styfigrow" src="../fig/arpanet_map_1973.jpg" alt="Cloud interconnected resources" width="350"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <img class="styfigrow" src="../fig/Arpanet_usa_1974.svg.png" alt="The Cloud is the Internet" width="400"/>  
-
-<p><b>Representation of Arpanet in 1973, the predecessor of the Internet. As more sites and countries were connected to the Internet, depicting all interconnections became impractical, and a cloud was used instead to represent all interconnections.</b></p>
-</div>
-
 
 ## Working in the Cloud/with Remote Machines
 
-There are a number of reasons why accessing a remote machine is valuable to scientists working with large datasets. Many analyses (especially in 'omics) are too large to run on our laptops or desktops. These analyses require larger machines, often several machines linked together, and remote access to these machines is the only practical solution.  
+There are a number of reasons why accessing a remote machine is valuable to scientists working with large datasets. Many analyses (especially in 'omics) are too large to run on our laptops or desktops. These analyses require larger machines, often several machines linked together, and remote access to these machines is the only practical solution.
 
 Cloud computing simplifies the use of as many computing resources as you need, at relatively low cost thanks to the various offerings available. You just need to define your computational requirements and off you go.
 
@@ -62,7 +27,7 @@ You'll know you need to start working on the cloud when:
 - You cannot afford the infrastructure (hardware, bandwidth, power supply, administrator) required to acquire and maintain sufficiently large computers for your analysis.
 - You need to continue working on your analyses while you travel.
 
-The cloud is a part of our everyday life (e.g. using Amazon, Google, Netflix, or an ATM involves remote computing). 
+The cloud is a part of our everyday life (e.g. using Amazon, Google, Netflix, or an ATM involves remote computing).
 
 ### Choosing a cloud platform
 
