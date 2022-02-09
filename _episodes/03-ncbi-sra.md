@@ -20,7 +20,7 @@ There are many repositories for public data. Some model organisms or fields have
 
 # Accessing the original archived data
 
-The [sequencing dataset (from Tenaillon, *et al.* 2016) adapted for this lesson](http://www.datacarpentry.org/organization-genomics/data/) was obtained from the [NCBI Sequence Read Archive](http://www.ncbi.nlm.nih.gov/sra), which is a large (~27 petabasepairs/2.7 x 10^16 basepairs as of April 2019) repository for next-generation sequence data. Like many NCBI databases, it is complex and mastering its use is greater than the scope of this lesson. Very often there will be a direct link (perhaps in the supplemental information) to where the SRA dataset can be found. We are only using a small part of these data, so a direct link cannot be found. If you have time, go through the following detailed description of finding the data we are using today (otherwise skip to the next section).
+The [sequencing dataset (from Tenaillon, *et al.* 2016) adapted for this lesson](https://cloud-span.github.io/01genomics/data/index.html) was obtained from the [NCBI Sequence Read Archive](http://www.ncbi.nlm.nih.gov/sra), which is a large (~27 petabasepairs/2.7 x 10^16 basepairs as of April 2019) repository for next-generation sequence data. Like many NCBI databases, it is complex and mastering its use is greater than the scope of this lesson. Very often there will be a direct link (perhaps in the supplemental information) to where the SRA dataset can be found. We are only using a small part of these data, so a direct link cannot be found. If you have time, go through the following detailed description of finding the data we are using today (otherwise skip to the next section).
 
 ## Locate the Run Selector Table for the Lenski Dataset on the SRA
 
@@ -42,13 +42,13 @@ The excerpt from the paper below includes information on how to locate the seque
 > version of the paper. Correspondence and requests for materials should be
 > addressed to R.E.L. (lenski *at* msu.edu)
 
-**At the beginning of this workshop we gave you [experimental information about these data](http://www.datacarpentry.org/organization-genomics/data/). This lesson uses a *subset* of SRA files, from a small *subproject* of the BioProject database
+**At the beginning of this workshop we gave you [experimental information about these data](https://cloud-span.github.io/01genomics/data/index.html). This lesson uses a *subset* of SRA files, from a small *subproject* of the BioProject database
 "PRJNA294072". To find these data you can follow the instructions below:**
 
 1. Notice that the paper references "PRJNA294072" as a "BioProject" at NCBI. If you go to the [NCBI website](https://www.ncbi.nlm.nih.gov/) and search for "PRJNA294072" you will be shown a link to the "Long-Term Evolution Experiment with E. coli" BioProject. Here is the link to that database: [https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA294072](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA294072).
 
 2. Once on the BioProject page, scroll down to the table under **"This project encompasses the
-following 13 sub-projects:"**.
+following 14 sub-projects:"**.
 
 3. In this table, select **subproject**
 *"[PRJNA295606](https://www.ncbi.nlm.nih.gov/bioproject/295606)	SRA or Trace	Escherichia coli B str. REL606	E. coli genome evolution over 50,000 generations (The University of Texas at...)"*.
@@ -77,7 +77,7 @@ takes you to the Run Selector page for BioProject PRJNA295606 (the BioProject nu
 4. This will take you to a page that is a run browser. Take a few minutes to examine some of the descriptions on the page.
 ![ncbi-run-browser.png](../fig/03_ncbi_new_run_browser.png)
 
-5. Use the browser’s back button to go back to the 'previous page'. As shown in the figure below, the second section of the page (“Select”) has the **Total** row showing you the current number of “Runs”, “Bytes”, and “Bases” in the dataset to date. On 2020-04-27 there were 312 runs, 109.58 Gb data, and 177.17 Gbases of data.
+5. Use the browser’s back button to go back to the 'previous page'. As shown in the figure below, the second section of the page (“Select”) has the **Total** row showing you the current number of “Runs”, “Bytes”, and “Bases” in the dataset to date. On 2022-02-09 there were 312 runs, 109.58 Gb data, and 177.17 Gbases of data.
 ![ncbi-new-metadata.png](../fig/03_ncbi_new_metadata.png)
 
 6. Click on the “Metadata” button to download the data for this lesson. The filename is “SraRunTable.txt” and save it on your computer Desktop.
@@ -94,9 +94,9 @@ takes you to the Run Selector page for BioProject PRJNA295606 (the BioProject nu
 ## Review the SraRunTable in a spreadsheet program
 
 
-Using your choice of spreadsheet program, open the `SraRunTable.txt` file. If prompted by the spreadsheet software be aware that the ***newer***  NCBI Run Selector provides a **comma-separated** file (often given a suffix of `.csv`), however if you used the ***older***  SRA Run Selector, this is a **tab-separated** file (often given the suffix of `.tsv`).
+Using your choice of spreadsheet program, open the `SraRunTable.txt` file. You should know where in your file system downloads are saved. If your computer does not give you the option to open the file with your spreadsheet program directly, you may need to open the program first and open the file via 'File > Open'. If prompted by the spreadsheet software be aware that the ***newer***  NCBI Run Selector provides a **comma-separated** file (often given a suffix of `.csv`), however if you used the ***older***  SRA Run Selector, this is a **tab-separated** file (often given the suffix of `.tsv`).
 
-Now you know that comma-separated and tab-separated files are both "text" files but use either commas or tabs as **delimiters**, respectively. They both are sometimes suffixed with `.txt`.
+Comma-separated and tab-separated files are both "text" files but use either commas or tabs as **delimiters**, respectively. They both are sometimes suffixed with `.txt`.
 
 > ## Discussion  
 > Discuss with the person next to you:
