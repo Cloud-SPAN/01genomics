@@ -64,8 +64,6 @@ A few seconds after you enter that command to the shell in your computer, you wi
 ## Create a folder for the course
 To keep things tidy and easily accessible, create a folder (or directory) to keep everything related to this course: your login key file, your notes, data, etc. If you have completed the Prenomics course, you will have already made a `cloudspan` folder. If that is the case, you can ignore the next couple of sets of instructions and instead navigate to your existing folder.
 
-## Create a folder for the course
-
 In theory you can make your Cloud-SPAN directory anywhere in your file system but we recommend making it inside your Desktop folder, to make it easy to access.
 
 1. **Create the folder** `cloudspan` in your *Desktop*.
