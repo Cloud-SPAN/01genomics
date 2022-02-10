@@ -60,7 +60,6 @@ As the name implies, **ssh** provides you with a secure (encrypted) way to use a
 
 A few seconds after you enter that command to the shell in your computer, you will be logged into your AWS instance and start using a (Linux) shell running in your instance.
 
-
 ## Create a folder for the course
 To keep things tidy and easily accessible, create a folder (or directory) to keep everything related to this course: your login key file, your notes, data, etc. If you have completed the Prenomics course, you will have already made a `cloudspan` folder. If that is the case, you can ignore the next couple of sets of instructions and instead navigate to your existing folder.
 
@@ -101,6 +100,74 @@ For now we will use the file explorer to move the `.pem` file around.
    If your browser asks you "where do you want to download the file?", choose the `cloudspan` directory.
 
    Otherwise, once downloading is finished, copy and paste/drag and drop your login key file from wherever it was downloaded to your `cloudspan` folder.
+
+## Open a Terminal and change the access permissions of your login key file
+
+1. **Open the *cloudspan* folder you created for the course**
+
+    Open your file manager and navigate to the `cloudspan` folder (hint: we recommended you make the folder in your *Desktop* directory - but you might have made it somewhere else). If you cannot find the folder, you can remind yourself where it is stored by looking at the absolute path you wrote down in the previous episode.
+
+    The folder should contain the login key file we downloaded in the previous episode and nothing else.
+
+2. **Right-click and open your machine's command line interface**
+
+    Now we can open the command line.
+
+    For Windows users:
+    - Right click anywhere inside the blank space of the file manager, then select **Git Bash Here**.
+
+    For Mac users:
+    - 
+
+    A new window will open - this is your command line interface, also known as the shell or the terminal. Once the terminal opens, it will display/output the **command prompt** to signal that it is ready to accept commands (instructions). The **command prompt** is 1 or 2 lines depending on your operating system (Windows, Linux, MacOS) and will be similar to the following.
+
+    Typical command prompt for Windows Git Bash users:
+
+    ~~~
+    username@machineid MINGW64 ~
+    $
+    ~~~
+    {: .output}
+
+    Obviously "username" and "machineid" in the Output box above will be different when you open a terminal and will correspond to the actual username and the name of the machine you are using. 
+
+    The character `$` is the typical ending of user prompts (the ending of admin users prompts is typically `#`). Commands you type will follow the `$`.
+    
+
+    Typical command prompt for Linux users:
+
+    ~~~
+    username@machineid:~ $
+    ~~~
+    {: .output}
+
+    Typical command prompt for MacOS users:
+
+    ~~~
+    machineid:~ username $
+    ~~~
+    {: .output}
+    
+    In the rest of this course we will show only the `$` to represent the prompt. 
+
+3. **Check that you are in the right folder**
+
+    The terminal should have automatically set our `cloudspan` folder as the current working directory. This is because we asked the terminal to open from a specific location.
+
+    You can check if the working directory is set correctly by looking at the file path which is defined to the left of your command prompt (`$`). It should display the second half of the absolute path we wrote down previously, usually starting after your computer's username, and always ending in `/cloudspan`.
+
+    You can also check by typing the letters `ls` after the command prompt and pressing enter. This will list all the files in the working directory AKA all files in the `cloudspan` folder. In our case, this should be just one file, the login key ending in `.pem`.
+
+4. **Change the access permissions of your login key file**
+
+    Enter the following command to change the access permissions of your file but **replace** NN with the actual number in your file name:
+    ~~~
+    $ chmod 400 login-key-instanceNN.pem 
+    ~~~
+    {: .bash}
+
+    The command `chmod` (change access mode) makes your login key file accessible to you only (and non-accessible to any other potential users of your computer), a condition that is required and checked by the program `ssh` that you will use next to login to your AWS instance. You will learn about file access permissions later in the course.
+
 
 If you were skipping the steps above having already made your `cloudspan` folder, here is where you shoud pay attention again.
 
