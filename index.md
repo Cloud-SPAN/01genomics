@@ -12,7 +12,7 @@ Much of the information in a sequencing project is digital, and we need to keep 
 
 In this lesson, we'll go through the project organisation and documentation needed for an efficient bioinformatics workflow. This will make you a more effective bioinformatics researcher and prepare your data and project for publication. Grant agencies and publishers increasingly require this information.
 
-In this lesson, we'll be using data from a famous study of experimental evolution using _E. coli_. [More information about this dataset is available here](https://cloud-span.github.io/genomics02-proj-mngt-cloud-genomics/data/index.html). In this study there are several types of files:
+In this lesson, we'll be using data from a famous study of experimental evolution using _E. coli_. [More information about this dataset is available here](https://cloud-span.github.io/01genomics/data/index.html). In this study there are several types of files:
 
 - spreadsheet data from the experiment that tracks the strains and their phenotype over time
 - spreadsheet data with information on the samples that were sequenced - the names of the samples, how they were prepared and the sequencing conditions
@@ -27,5 +27,5 @@ Throughout the analysis, we will generate more files from the steps in the bioin
 > including the concept of genomic variation within a population. 
 >
 > This lesson is part of a course that uses data hosted on an Amazon Machine Instance (AMI). Workshop participants will be given information on how to log-in to the AMI during the course.
-> Information on preparing for the course is provided on the [Cloud-SPAN Genomics Course setup page](https://cloud-span.github.io/genomics01-intro/setup.html).
+> Information on preparing for the course is provided on the [Cloud-SPAN Genomics Course setup page](https://cloud-span.github.io/01genomics/setup.html).
 {: .prereq}
