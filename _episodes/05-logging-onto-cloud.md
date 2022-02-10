@@ -60,17 +60,39 @@ As the name implies, **ssh** provides you with a secure (encrypted) way to use a
 
 A few seconds after you enter that command to the shell in your computer, you will be logged into your AWS instance and start using a (Linux) shell running in your instance.
 
-But first, to keep things tidy and easily accessible, create a folder (or directory) to keep everything related to this course: your login key file, your notes, data, etc.  We will then download your login key file to that folder and change its access permissions for the reasons given below. Finally we will login into your instance with ssh.
 
-## Create a folder for the course and download your login key file to that folder
+## Create a folder for the course
+To keep things tidy and easily accessible, create a folder (or directory) to keep everything related to this course: your login key file, your notes, data, etc. If you have completed the Prenomics course, you will have already made a `cloudspan` folder. If that is the case, you can ignore the next couple of sets of instructions and instead navigate to your existing folder.
 
-1. **Create the folder** *cloudspan* in your *Desktop*.
+## Create a folder for the course
 
-   In your Desktop, click the right button of the mouse to open the File Explorer/Manager menu, and then left click on New and then on Folder, in Windows, or New Folder in Linux Gnome.
+In theory you can make your Cloud-SPAN directory anywhere in your file system but we recommend making it inside your Desktop folder, to make it easy to access.
 
-   Name the folder *cloudspan*
+1. **Create the folder** `cloudspan` in your *Desktop*.
 
-   Later you can change the name of the folder and move it somewhere else.
+   Minimise all windows until you can see your desktop background. Right click and select *New*, then *Folder*. Name the folder `cloudspan`.
+
+   You should see a folder icon appear on your desktop with the label `cloudspan`.
+
+   Additionally, if you enter your file explorer application you should be able to click on the *Desktop* directory at the side and see the `cloudspan` folder.
+
+2. **Write down the absolute path** to your `cloudspan` folder.
+
+   Find out what the absolute path is using your file manager application. Right click on the folder, or in any blank space inside the folder, and select *Properties*.
+
+   The field called *Location* will tell you the absolute path for your folder. Once you have this written down, do not lose it! Now you can find your way back to the `cloudspan` folder whenever you need to, no matter where you are in your file structure.
+
+## Download your login key file
+
+Next we will download your unique login key file from the email you received from the Cloud-SPAN team. This type of file is called a `.pem` file. It contains a certificate which allows you to communicate with the Cloud securely. Without the `.pem` file you cannot access the Cloud.
+
+For now we will use the file explorer to move the `.pem` file around.
+
+1. **Find out where downloads are saved** on your computer.
+
+   How you so this will depend on which browser you use. You can find instructions for changing your default download location in [Chrome](https://support.google.com/chrome/answer/95759?hl=en-GB&co=GENIE.Platform%3DDesktop), [Edge](https://support.microsoft.com/en-us/microsoft-edge/find-where-your-browser-is-saving-downloads-d3e83af6-68bb-aa90-3167-eeb657013902) or [Safari](https://support.apple.com/en-gb/guide/safari/sfri40598/mac).
+
+   If you already know which folder your downloads go to, then you can skip this step.
 
 2. **Download your login key file** to the folder you just created.
 
@@ -78,84 +100,11 @@ But first, to keep things tidy and easily accessible, create a folder (or direct
    
    **Mac users** may need to Click on 'download' when the file says it can't be opened.
 
-   If your browser asks you "where do you want to download the file?", choose the directory for the course you just created.
+   If your browser asks you "where do you want to download the file?", choose the `cloudspan` directory.
 
-   Otherwise, drag and drop your login key file from wherever it was downloaded to the folder for the course you created.
+   Otherwise, once downloading is finished, copy and paste/drag and drop your login key file from wherever it was downloaded to your `cloudspan` folder.
 
-## Open a Terminal and change the access permissions of your login key file
-
-1. **Open terminal** (or Git Bash terminal if you are a Windows user). 
-
-    Search for 'Terminal' or look for the terminal icon and click (or double click) on it:
-
-    This is the Git Bash terminal icon (Windows users):   
-
-    <img src="../fig/gitbash-launch-icon.png" alt="GIT BASH terminal" width="50"/> 
-
-    The terminal icon in Mac and Linux looks like the following:
-    
-    <img src="../fig/icon-mac-terminal.png" alt="Mac terminal" width="50"/>
-    <img src="../fig/icon-linux-terminal.png" alt="Linux terminal" width="50"/> 
-
-    Once the terminal opens, it will display/output the **command prompt** to signal that it is ready to accept commands (instructions). The **command prompt** is 1 or 2 lines depending on your operating system (Windows, Linux, MacOS) and will be similar to the following.
-
-    Typical command prompt for Windows Git Bash users:
-
-    ~~~
-    username@machineid MINGW64 ~
-    $
-    ~~~
-    {: .output}
-
-    Obviously "username" and "machineid" in the Output box above will be different when you open a terminal and will correspond to the actual username and the name of the machine you are using. 
-
-    The character `$` is the typical ending of user prompts (the ending of admin users prompts is typically `#`). Commands you type will follow the `$`.
-    
-
-    Typical command prompt for Linux users:
-
-    ~~~
-    username@machineid:~ $
-    ~~~
-    {: .output}
-
-    Typical command prompt for MacOS users:
-
-    ~~~
-    machineid:~ username $
-    ~~~
-    {: .output}
-    
-    In the rest of this course we will show only the `$` to represent the prompt. 
-
-2. **Move to the folder you created for the course**
-
-   Once the terminal opens, **you will be** in your **home folder** (directory), which contains all your files and other typical folders such as the *Desktop*, *Downloads*, *Documents*, etc.
-
-   Move to the folder you created by typing the following command and then pressing <kbd>Enter</kbd> at the command prompt:
-
-    ~~~
-    $ cd Desktop/cloudspan	
-    ~~~
-    {: .bash}
-
-    *Don't type the dollar character* `$`.
-
-    The command `cd` stands for "change (to) directory", and you must specify the name of the directory you want to move to. 
-
-    In the command above, we have specified *to change to* a directory within another directory.
-
-   
-
-3. **Change the access permissions of your login key file**
-
-    Enter the following command to change the access permissions of your file but **replace** NN with the actual number in your file name:
-    ~~~
-    $ chmod 400 login-key-instanceNN.pem 
-    ~~~
-    {: .bash}
-
-    The command `chmod` (change access mode) makes your login key file accessible to you only (and non-accessible to any other potential users of your computer), a condition that is required and checked by the program `ssh` that you will use next to login to your AWS instance. You will learn about file access permissions later in the course.
+If you were skipping the steps above having already made your `cloudspan` folder, here is where you shoud pay attention again.
 
 ## Login into your instance with ssh
 
