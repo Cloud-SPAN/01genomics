@@ -20,7 +20,7 @@ There are many repositories for public data. Some model organisms or fields have
 
 # Accessing the original archived data
 
-The [sequencing dataset (from Tenaillon, *et al.* 2016) adapted for this lesson](https://cloud-span.github.io/01genomics/data/index.html) was obtained from the [NCBI Sequence Read Archive](http://www.ncbi.nlm.nih.gov/sra), which is a large (~27 petabasepairs/2.7 x 10^16 basepairs as of April 2019) repository for next-generation sequence data. Like many NCBI databases, it is complex and mastering its use is greater than the scope of this lesson. Very often there will be a direct link (perhaps in the supplemental information) to where the SRA dataset can be found. We are only using a small part of these data, so a direct link cannot be found. If you have time, go through the following detailed description of finding the data we are using today (otherwise skip to the next section).
+The [sequencing dataset (from Tenaillon, *et al.* 2016) adapted for this lesson](https://cloud-span.github.io/01genomics/data/index.html) was obtained from the [NCBI Sequence Read Archive](http://www.ncbi.nlm.nih.gov/sra), which is a large ([62.6 petabasepairs/6.26 x 10^16 basepairs as of March 2022](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?)) repository for next-generation sequence data. Like many NCBI databases, it is complex and mastering its use is greater than the scope of this lesson. Very often there will be a direct link (perhaps in the supplemental information) to where the SRA dataset can be found. We are only using a small part of these data, so a direct link cannot be found. If you have time, go through the following detailed description of finding the data we are using today (otherwise skip to the next section).
 
 ## Locate the Run Selector Table for the Lenski Dataset on the SRA
 
@@ -61,84 +61,47 @@ that has a link to the 224 SRA files for this subproject.
 ![03_send_results.png](../fig/03_ncbi_send_results.png)
 
 6. For a more organized table, select "Send results to Run selector". This
-takes you to the Run Selector page for BioProject PRJNA295606 (the BioProject number for the experiment SRP064605) that is used in the next section. The run selector is being updated, at this point you can either use the redesigned SRA Run Selector (recommended) or revert to the old Run Selector.
+takes you to the [Run Selector page for BioProject PRJNA295606](https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP064605) (the BioProject number for the experiment SRP064605) that is used in the next section. 
 
+## Download the Lenski SRA data from the SRA Run Selector Table
 
-## Download the Lenski SRA data from the (newer) SRA Run Selector Table
+1. Make sure you access the Tenaillon dataset from the provided link: [https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP064605](https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP064605). This is NCBI’s cloud-based SRA interface. You will be presented with a page for the overall SRA accession SRP064605 - this is a collection of all the experimental data.
 
-1. Make sure you access the Tenaillon dataset from the provided link: [https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP064605](https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP064605). This is NCBI’s new cloud-based SRA interface. You will be presented with a page for the overall SRA accession SRP064605 - this is a collection of all the experimental data.
+2. Notice on this page there are three sections. **Common Fields** **Select**, and **Found 312 Items**. 
+Click on the first item in the **Run** column of the the Found 312 items table.
+![ncbi-sra-run-selector.png](../fig/03_ncbi_new_tables2.png)
 
-2. At the top of the page is an option to switch back to the “old Run Selector”. We will discuss that later.
-![ncbi-old-runtable](../fig/03_ncbi_new_top2.png)
-
-3. Notice on this page there are three sections. “Common Fields” “Select”, and “Found 312 Items”. Within “Found 312 Items”, click on the first Run Number (Column “Run” Row “1”).
-![ncbi-new-tables2.png](../fig/03_ncbi_new_tables2.png)
-
-4. This will take you to a page that is a run browser. Take a few minutes to examine some of the descriptions on the page.
+3. This will take you to a page that is a **Run Browser**. Take a few minutes to examine some of the descriptions on the page.
 ![ncbi-run-browser.png](../fig/03_ncbi_new_run_browser.png)
 
-5. Use the browser’s back button to go back to the 'previous page'. As shown in the figure below, the second section of the page (“Select”) has the **Total** row showing you the current number of “Runs”, “Bytes”, and “Bases” in the dataset to date. On 2022-02-09 there were 312 runs, 109.58 Gb data, and 177.17 Gbases of data.
-![ncbi-new-metadata.png](../fig/03_ncbi_new_metadata.png)
+4. Use the browser’s back button to go back to the previous page. The **Select** section has the **Total** row showing you the current number of Runs, Bytes, and Bases in the dataset to date. On 2022-03-05 there were 312 runs, 109.58 Gb data, and 177.17 Gbases of data.
 
-6. Click on the “Metadata” button to download the data for this lesson. The filename is “SraRunTable.txt” and save it on your computer Desktop.
-
-> ## Downloading the Lenski SRA data from the SRA Run Selector Table using the old Run Selector
->
-> Go to the [“old Run Selector” instructions](../old-ncbi/index.html) page and return here after downloading your `SraRunTable.txt` file.
->
-> We include the “old Run Selector” page because the webpages ***and*** downloaded file `SraRunTable.txt` are slightly different.
-{: .callout}
-
-**You should now have a file called `SraRunTable.txt`**
+5. Click on the **Metadata** button to download the data for this lesson. The filename is “SraRunTable.txt” and save it on your computer Desktop.
 
 ## Review the SraRunTable in a spreadsheet program
-
-
-Using your choice of spreadsheet program, open the `SraRunTable.txt` file. You should know where in your file system downloads are saved. If your computer does not give you the option to open the file with your spreadsheet program directly, you may need to open the program first and open the file via 'File > Open'. If prompted by the spreadsheet software be aware that the ***newer***  NCBI Run Selector provides a **comma-separated** file (often given a suffix of `.csv`), however if you used the ***older***  SRA Run Selector, this is a **tab-separated** file (often given the suffix of `.tsv`).
-
-Comma-separated and tab-separated files are both "text" files but use either commas or tabs as **delimiters**, respectively. They both are sometimes suffixed with `.txt`.
-
+The SraRunTable.txt is a comma separated values file that you can open in a spreadsheet program. Open it in your spreadsheet program. We have also added it to this [googlesheet](https://docs.google.com/spreadsheets/d/1P9jxofcsRuI2jjs7rQVwX6_TJnGFZpS0NLuCkXieklg/edit?usp=sharing).
 > ## Discussion  
 > Discuss with the person next to you:
 >
 > 1. What strain of *E. coli* was used in this experiment?
 > 2. What was the sequencing platform used for this experiment?
-> 3. What samples in the experiment contain
-> [paired end](http://www.illumina.com/technology/next-generation-sequencing/paired-end-sequencing_assay.html)
-> sequencing data?
-> 4. What other kind of data is available?
-> 5. Why are you collecting this kind of information about your sequencing runs?
+> 3. What other kind of data is available?
+> 4. Why are you collecting this kind of information about your sequencing runs?
 >
 > > ## Solution
 > > 1. Escherichia coli B str. REL606 shown under the "organism" column. This is a tricky question because the column labeled "strain" actually has sample names
 > > 2. The Illumina sequencing platform was used shown in the column "Platform". But notice they used multiple instrument types listed under "Instrument"
-> > 3. Sort by LibraryLayout and the column "DATASTORE_filetype" shows that "minhash_sig realign ref_stats sra wgmlst_sig" were used for all single-end reads. (Also notice the Illumina Genome Analyzer IIx was never used for paired-end sequencing)
-> > 4. There are several columns including: megabases of sequence per sample, Assay type, BioSample Model, and more.
-> > 5. These are examples of "metadata" that you should collect for sequencing projects that are sent to public databases.
+> > 3. There are several columns including: megabases of sequence per sample, Assay type, BioSample Model, and more.
+> > 4. These are examples of "metadata" that you should collect for sequencing projects that are sent to public databases.
 > >
 > {: .solution}
 {: .challenge}
 
-After answering the questions, you should avoid saving any changes you might have made to this file. We do not want to make any changes. If you were to save this file, make sure you save it as a plain `.txt` file.
+After answering the questions, you should avoid saving any changes you might have made to this file. We do not want to make any changes. 
 
-## Downloading a few sequencing files: EMBL-EBI
+## Obtaining the data
 
-The SRA does not support direct download of fastq files from its webpage. However, the [European Nucleotide Archive](https://www.ebi.ac.uk/ena) does. Let's see how we can get a download link to a file we are interested in.
-
-1. Navigate to the [ENA](https://www.ebi.ac.uk/ena).
-
-2. In the "Accession" search bar, type in `SRR2589044`. Make sure there are no spaces after the accession number, and press search.
-
-3. You will see a table with information about the sample. In the table, scroll down to see there is a header "FASTQ files (FTP)". If you wanted to download the files to your computer, you could click on the links to download the files. Alternatively, right click and copy the URL to save it for later. We do not need to download these files right now, and because they are large we will not put them on our computers now.
-
-We do not recommend downloading large numbers of sequencing files this way. For that, the NCBI has made a software package called the `sra-toolkit`. However, for a couple files, it's often easier to go through the ENA.
-
-## Where to learn more
-
-#### About the Sequence Read Archive
-
-* You can learn more about the SRA by reading the [SRA Documentation](http://www.ncbi.nlm.nih.gov/Traces/sra/)  
-* The best way to transfer a large SRA dataset is by using the [SRA Toolkit](http://www.ncbi.nlm.nih.gov/Traces/sra/?view=toolkit_doc)  
+The SRA does not support direct download of fastq files from its webpage. It instead requires the [SRA Toolkit](http://www.ncbi.nlm.nih.gov/Traces/sra/?view=toolkit_doc) which you would need to install. 
 
 #### References
 
