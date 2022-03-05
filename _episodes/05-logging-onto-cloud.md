@@ -40,27 +40,31 @@ This lesson covers how to log into, and out of, an *already running* Amazon inst
 
 ## Background to AWS
 
-An Amazon Web Services (AWS) instance is a **remote computer** that runs on AWS infrastructure and that is accessible from any laptop or desktop as described below. Setting up a new AWS instance requires a credit card, an AWS account, and up to a day of verification time. 
+An Amazon Web Services (AWS) instance is a **remote computer** that runs on AWS infrastructure and that is accessible from any laptop or desktop provided you have the log-in credentials.
 
-To save time, your instructor has launched an AWS instance for you prior to the course, and connected it to our lesson data and software analysis tools. It all works as follows.
-
-We have a pre-configured copy of the data and software analysis tools needed for this course that is always available to attach to a new AWS instance that is accessible to you as long as you have the log-in credentials to open it.
-
-To login into your AWS instance for this course, you'll need:
-- the name of your instance and a login key file, both of which you received via email
+To log in if you are attending a tutor-led Genomics workshop you will need:
+- the name of your instance and a login key file
 - the shell/terminal application --- **Windows users** should have already installed the *Git Bash* shell; otherwise follow the directions in the [Setup](../setup)
-- the *secure shell* (**ssh**) application, which is readily available in MacOS, Linux and Windows. **Windows users** will use ssh through Git Bash. 
+- the *secure shell* (`ssh`) application, which is readily available in MacOS, Linux and Windows. **Windows users** will use `ssh` through Git Bash. 
 
-As the name implies, **ssh** provides you with a secure (encrypted) way to use a remote *shell*, as simple as this (you do not have to type this yet):
+As the name implies, `ssh` provides you with a secure (encrypted) way to use a remote *shell*, as simple as this (you do not have to type this yet):
 
  ~~~
- $ ssh -i login-key-instanceNN.pem  csuser@instanceNN-gc.cloud-span.aws.york.ac.uk
+ $ ssh -i login-key-instanceNNN.pem  csuser@instanceNNN.cloud-span.aws.york.ac.uk
  ~~~
  {: .bash}
 
-A few seconds after you enter that command to the shell in your computer, you will be logged into your AWS instance and start using a (Linux) shell running in your instance.
+Where `NNN` is a three-digit number giving your instance number.
 
-## Create a folder for the course
+What you do next depends on whether you did the **[Prenomics module](https://cloud-span.github.io/prenomics00-intro/)**
+
+## Instructions if you **have** done Prenomics
+
+Open a terminal and change you directory to the `cloudspan` folder. Now go to the section **Login into your instance with ssh** below.
+
+## Instructions if you **have not** done Prenomics
+
+### Create a folder for the course
 To keep things tidy and easily accessible, create a folder (or directory) to keep everything related to this course: your login key file, your notes, data, etc. If you have completed the Prenomics course, you will have already made a `cloudspan` folder. If that is the case, you can ignore the next couple of sets of instructions and instead navigate to your existing folder.
 
 In theory you can make your Cloud-SPAN directory anywhere in your file system but we recommend making it inside your Desktop folder, to make it easy to access.
@@ -79,7 +83,7 @@ In theory you can make your Cloud-SPAN directory anywhere in your file system bu
 
    The field called *Location* will tell you the absolute path for your folder. Once you have this written down, do not lose it! Now you can find your way back to the `cloudspan` folder whenever you need to, no matter where you are in your file structure.
 
-## Download your login key file
+### Download your login key file
 
 Next we will download your unique login key file from the email you received from the Cloud-SPAN team. This type of file is called a `.pem` file. It contains a certificate which allows you to communicate with the Cloud securely. Without the `.pem` file you cannot access the Cloud.
 
@@ -101,7 +105,7 @@ For now we will use the file explorer to move the `.pem` file around.
 
    Otherwise, once downloading is finished, copy and paste/drag and drop your login key file from wherever it was downloaded to your `cloudspan` folder.
 
-## Open a Terminal and change the access permissions of your login key file
+### Open a Terminal and change the access permissions of your login key file
 
 1. **Open the *cloudspan* folder you created for the course**
 
@@ -117,8 +121,15 @@ For now we will use the file explorer to move the `.pem` file around.
     - Right click anywhere inside the blank space of the file manager, then select **Git Bash Here**.
 
     For Mac users:
-    - 
 
+    You have two options. 
+    
+    EITHER
+    - Open **Terminal** in one window and type `cd` followed by a space. Do not press enter! Now open **Finder** in another window. Drag and drop the `cloudspan` folder from the Finder to the Terminal. You should see the file path leading to your `cloudspan` folder appear. Now press enter to navigate to the folder.
+
+    OR
+    - Open **Terminal** and type `cd` followed by the absolute path that leads to your `cloudspan` folder. Press enter.  
+    
     A new window will open - this is your command line interface, also known as the shell or the terminal. Once the terminal opens, it will display/output the **command prompt** to signal that it is ready to accept commands (instructions). The **command prompt** is 1 or 2 lines depending on your operating system (Windows, Linux, MacOS) and will be similar to the following.
 
     Typical command prompt for Windows Git Bash users:
@@ -162,7 +173,7 @@ For now we will use the file explorer to move the `.pem` file around.
 
     Enter the following command to change the access permissions of your file but **replace** NN with the actual number in your file name:
     ~~~
-    $ chmod 400 login-key-instanceNN.pem 
+    $ chmod 400 login-key-instanceNNN.pem 
     ~~~
     {: .bash}
 
@@ -173,18 +184,18 @@ If you were skipping the steps above having already made your `cloudspan` folder
 
 ## Login into your instance with ssh
 
-1. Copy and paste the command in the Code box below to your *terminal*, but **replace** `NN` with the number in your login key file name.
+1. Copy and paste the command in the Code box below to your *terminal*, but **replace** `NNN` with the number in your login key file name.
 
     Windows Git Bash users only:
     - **copy** the command the usual Windows way: (1) highlight it with the mouse pointer while pressing the mouse left button and (2) press Ctrl-v (keys Ctrl and v simultaneously).
     - but **paste** it the Linux/Unix way: by pressing the mouse middle button while hovering the mouse pointer over the Git Bash window. (Try with the right button if the middle button doesn't work.)
 
     ~~~
-    $ ssh -i login-key-instanceNN.pem  csuser@instanceNN-gc.cloud-span.aws.york.ac.uk
+    $ ssh -i login-key-instanceNNN.pem  csuser@instanceNNN.cloud-span.aws.york.ac.uk
     ~~~
     {: .bash}
 
-    *Be sure to replace* `NN` *twice.* You can use the left and right arrow keys to move to where NN is.
+    *Be sure to replace* `NNN` *twice.* You can use the left and right arrow keys to move to where NN is.
 
     The `-i` option tells `ssh` the identity file containing the key to send to your AWS instance for it to check that you have access permissions to connect as an *ssh client*. 
 
@@ -194,7 +205,7 @@ If you were skipping the steps above having already made your `cloudspan` folder
 2. The terminal will display a security message, after you enter the `ssh` command, *similar* to the one below: 
 
     ~~~
-    The authenticity of host 'instance06-gc-cloud-span.aws.york.ac.uk (52.211.132.120)' can't be established.ECDSA key fingerprint is SHA256:8N054prkkCeM4GCDSsa0AUnSQw5ngBQHbOR40FqfqLg.
+    The authenticity of host 'instanceNNN.cloud-span.aws.york.ac.uk (52.211.132.120)' can't be established.ECDSA key fingerprint is SHA256:8N054prkkCeM4GCDSsa0AUnSQw5ngBQHbOR40FqfqLg.
     Are you sure you want to continue connecting (yes/no/[fingerprint])? 
     ~~~
     {: .output}
@@ -205,7 +216,7 @@ If you were skipping the steps above having already made your `cloudspan` folder
 
     ~~~
     ...
-    csuser@instance05-gc:~ $
+    csuser@instanceNNN-gc:~ $
     ~~~
     {: .output}
 
@@ -223,8 +234,8 @@ csuser@instance05-gc:~ $ exit
 {: .bash}
 ~~~
 logout
-Connection to instance05-gc.cloud-span.aws.york.ac.uk closed.
-Amanda-MacBook-Pro-3 $
+Connection to instanceNNN.cloud-span.aws.york.ac.uk closed.
+$
 ~~~
 {: .output}
 
@@ -234,6 +245,6 @@ To login back to your instance, open a terminal, move to the directory you creat
 
 ~~~ 
 $ cd Desktop/cloudspan
-$ ssh -i login-key-instanceNN.pem  csuser@instanceNN-gc.cloud-span.aws.york.ac.uk
+$ ssh -i login-key-instanceNNN.pem  csuser@instanceNNN.cloud-span.aws.york.ac.uk
 ~~~
 {: .bash}
