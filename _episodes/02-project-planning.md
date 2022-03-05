@@ -23,7 +23,7 @@ In the most important ways, the methods and approaches we need in bioinformatics
 
 > ## Discussion
 >
-> Before we go any further, here are some important questions to consider. If you are learning at a workshop, please use the padlet to share your ideas.  
+> Before we go any further, here are some important questions to consider. Use the [Forum](https://cloudspan.peerboard.com/space/1783234884) to share your ideas.  
 > It's okay if you don't have answers to these questions yet. This course should help you find some of the answers.
 >
 > - What challenges do you think you will face with a large sequence dataset?  
@@ -42,7 +42,7 @@ facility. Let's take a look at this [example submission spreadsheet](https://doc
 > 2. What errors do you see in the data?
 > 3. Are there any types of error that would be difficult to spot? Is there any way you can test these to find them?
 >
-> Nominate someone from your group to summarise your ideas for each question on the Padlet.
+> Nominate someone from your group to summarise your ideas for each question on the [Forum](https://cloudspan.peerboard.com/space/1783234884).
 >
 > > ## Solution
 > > Improvements in names
@@ -72,7 +72,7 @@ When the data come back from the sequencing facility, you will receive some docu
 the sequence files themselves. Take a look at this [example](https://docs.google.com/spreadsheets/d/1IyNShMHu0IDbwij4ZdcXtOh5_V53KBcwu1i70Dfaa3g/edit?usp=sharing), another Google Sheets document:
 
 > ## Exercise
-> Think about the following and add your ideas to the Padlet:
+> Think about the following and add your ideas to the [Forum](https://cloudspan.peerboard.com/space/1783234884):
 > 1. How are the samples organised?
 > 2. Are you able to relate file names to the sample names you submitted?
 > 3. What do the \_R1/\_R2 extensions mean in the 'filename' column?
