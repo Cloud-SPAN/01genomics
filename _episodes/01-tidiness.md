@@ -21,7 +21,7 @@ When we think about the data for a sequencing project, we often start by thinkin
 Just as important, if not more so, is the data you've generated about the sequences before it ever goes to the sequencing center. This is the data about the data, often called the **metadata**. Without the information about *what* you sequenced, the sequence data itself is useless.  
 
 > ## Discussion
-> What kinds of data and information are you likely to have generated before sending your DNA/RNA off for sequencing? Put your ideas on the [Forum](https://cloudspan.peerboard.com/post/1866945226?space=1783234884).
+> What kinds of data and information are you likely to have generated before sending your DNA/RNA off for sequencing? Share your ideas on the [forum](https://cloudspan.peerboard.com/post/1866945226?space=1783234884).
 >
 > > ## Solution
 > > Types of files and information you might have generated:  
@@ -97,7 +97,7 @@ The cardinal rules of using spreadsheet programs for data:
 >
 > If you are attending an instructor-led workshop use breakout rooms, for about 2 minutes, to suggest some of the problems with the spreadsheet data shown above. You can look at the image, or view the spreadsheet on Google Sheets via this [link](https://docs.google.com/spreadsheets/d/1ZposEZ2nWzQl_GPix3FhHqM0CV7asjve52O7urmWBqk/edit?usp=sharing).
 >
-> Nominate someone from your group to summarise your ideas on the [Forum](https://cloudspan.peerboard.com/post/1866945226?space=1783234884).
+> Nominate someone from your group to summarise your ideas on the [forum](https://cloudspan.peerboard.com/post/1866945226?space=1783234884).
 >
 >
 > > ## Solution

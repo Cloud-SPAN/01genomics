@@ -23,7 +23,7 @@ In the most important ways, the methods and approaches we need in bioinformatics
 
 > ## Discussion
 >
-> Before we go any further, here are some important questions to consider. Use the [Forum](https://cloudspan.peerboard.com/space/1783234884) to share your ideas.  
+> Before we go any further, here are some important questions to consider. Use the [forum](https://cloudspan.peerboard.com/post/1500542578?space=1783234884) to share your ideas.  
 > It's okay if you don't have answers to these questions yet. This course should help you find some of the answers.
 >
 > - What challenges do you think you will face with a large sequence dataset?  
@@ -42,7 +42,7 @@ facility. Let's take a look at this [example submission spreadsheet](https://doc
 > 2. What errors do you see in the data?
 > 3. Are there any types of error that would be difficult to spot? Is there any way you can test these to find them?
 >
-> Nominate someone from your group to summarise your ideas for each question on the [Forum](https://cloudspan.peerboard.com/space/1783234884).
+> Nominate someone from your group to summarise your ideas for each question on the [forum](https://cloudspan.peerboard.com/post/32340257?space=1783234884).
 >
 > > ## Solution
 > > Improvements in names
