@@ -36,7 +36,7 @@ The excerpt from the paper below includes information on how to locate the seque
 > BioProject database under accession number PRJNA294072. The *breseq*
 > analysis pipeline is available at GitHub ([http://github.com/barricklab/breseq](https://github.com/barricklab/breseq/)).
 > Other analysis scripts are available at the Dryad Digital Repository ([http://dx.doi.org/10.5061/dryad.6226d](https://doi.org/10.5061/dryad.6226d)). R.E.L. will make strains available to qualified
-> recipients, subject to a material transfer agreement. Repreints and permissions
+> recipients, subject to a material transfer agreement. Reprints and permissions
 > information is available at www.nature.com/reprints. The authors declare no
 > competing financial interests. Readers are welcome to comment on the online
 > version of the paper. Correspondence and requests for materials should be
@@ -61,13 +61,13 @@ that has a link to the 224 SRA files for this subproject.
 ![03_send_results.png](../fig/03_ncbi_send_results.png)
 
 6. For a more organized table, select "Send results to Run selector". This
-takes you to the [Run Selector page for BioProject PRJNA295606](https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP064605) (the BioProject number for the experiment SRP064605) that is used in the next section. 
+takes you to the [Run Selector page for BioProject PRJNA295606](https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP064605) (the BioProject number for the experiment SRP064605) that is used in the next section.
 
 ## Download the Lenski SRA data from the SRA Run Selector Table
 
 1. Make sure you access the Tenaillon dataset from the provided link: [https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP064605](https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP064605). This is NCBI’s cloud-based SRA interface. You will be presented with a page for the overall SRA accession SRP064605 - this is a collection of all the experimental data.
 
-2. Notice on this page there are three sections. **Common Fields** **Select**, and **Found 312 Items**. 
+2. Notice on this page there are three sections. **Common Fields** **Select**, and **Found 312 Items**.
 Click on the first item in the **Run** column of the the Found 312 items table.
 ![ncbi-sra-run-selector.png](../fig/03_ncbi_new_tables2.png)
 
@@ -81,7 +81,7 @@ Click on the first item in the **Run** column of the the Found 312 items table.
 ## Review the SraRunTable in a spreadsheet program
 The SraRunTable.txt is a comma separated values file that you can open in a spreadsheet program. Open it in your spreadsheet program. We have also added it to this [googlesheet](https://docs.google.com/spreadsheets/d/1P9jxofcsRuI2jjs7rQVwX6_TJnGFZpS0NLuCkXieklg/edit?usp=sharing).
 > ## Discussion  
-> Use the information in the spreadsheet to answer these questions and share your answers on the [forum](https://cloudspan.peerboard.com/post/943737097?space=1783234884)
+> Use the information in the spreadsheet to answer these questions and share your answers on the [forum](https://cloudspan.peerboard.com/post/1837771557?space=1783234884)
 >
 > 1. What strain of *E. coli* was used in this experiment?
 > 2. What was the sequencing platform used for this experiment?
@@ -97,11 +97,11 @@ The SraRunTable.txt is a comma separated values file that you can open in a spre
 > {: .solution}
 {: .challenge}
 
-After answering the questions, you should avoid saving any changes you might have made to this file. We do not want to make any changes. 
+After answering the questions, you should avoid saving any changes you might have made to this file. We do not want to make any changes.
 
 ## Obtaining the data
 
-The SRA does not support direct download of fastq files from its webpage. It instead requires the [SRA Toolkit](http://www.ncbi.nlm.nih.gov/Traces/sra/?view=toolkit_doc) which you would need to install. 
+The SRA does not support direct download of fastq files from its webpage. It instead requires the [SRA Toolkit](http://www.ncbi.nlm.nih.gov/Traces/sra/?view=toolkit_doc) which you would need to install.
 
 #### References
 
