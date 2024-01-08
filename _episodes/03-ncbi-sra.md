@@ -81,7 +81,7 @@ Click on the first item in the **Run** column of the the Found 312 items table.
 ## Review the SraRunTable in a spreadsheet program
 The SraRunTable.txt is a comma separated values file that you can open in a spreadsheet program. Open it in your spreadsheet program. We have also added it to this [googlesheet](https://docs.google.com/spreadsheets/d/1P9jxofcsRuI2jjs7rQVwX6_TJnGFZpS0NLuCkXieklg/edit?usp=sharing).
 > ## Discussion  
-> Use the information in the spreadsheet to answer these questions and share your answers on the [forum](https://cloudspan.peerboard.com/post/1837771557?space=1783234884)
+> Use the information in the spreadsheet to answer these questions.
 >
 > 1. What strain of *E. coli* was used in this experiment?
 > 2. What was the sequencing platform used for this experiment?
